@@ -15,15 +15,15 @@ class silvermembers(members):
     def __checkout(self):
         return round(super().checkout() * 0.95)
     def printcheckout(self):
-        print('Glad to see you {0}! We have some discount for you!'.format(super().getname()))
-        print('All things you buy are {0} dollars. See you next time!'.format(self.__checkout()))
+        print('Glad to see you %s! We have some discount for you!'%super().getname())
+        print('All things you buy are %d dollars. See you next time!'%self.__checkout())
 
 class goldenmembers(members):
     def __checkout(self):
         return round(super().checkout() * 0.85)
     def printcheckout(self):
-        print('Welcome back {0}! How can we help you today?'.format(super().getname()))
-        print('All things you buy are {0} dollars. We are always ready to serve you!'.format(self.__checkout()))
+        print('Welcome back %s! How can we help you today?'%super().getname())
+        print('All things you buy are %d dollars. We are always ready to serve you!'%self.__checkout())
 
 customer1 = members(30000, 'Ran')
 customer2 = silvermembers(30000, 'Michelle')
